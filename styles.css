@@ -85,7 +85,7 @@ a{ text-decoration:none; color:inherit; }
 .sheet{ position:absolute; left:0; right:0; bottom:0; background:var(--panel); border-radius:20px 20px 0 0; padding:10px 20px 28px 20px; z-index:31; transform:translateY(100%); transition:transform 0.34s cubic-bezier(0.32,0.72,0,1); max-height:85vh; overflow-y:auto; }
 .sheet.open{ transform:translateY(0); }
 .sheet-handle{ width:36px; height:4px; background:var(--line); border-radius:2px; margin:0 auto 16px auto; }
-.sheet-close{ position:absolute; top:10px; right:28px; width:30px; height:30px; border-radius:50%; background:magenta; border:1px solid var(--line); color:var(--sub); font-size:18px; line-height:1; display:flex; align-items:center; justify-content:center; cursor:pointer; touch-action:manipulation; }
+.sheet-close{ position:absolute; top:10px; right:12px; width:30px; height:30px; border-radius:50%; background:var(--panel-2); border:1px solid var(--line); color:var(--sub); font-size:18px; line-height:1; display:flex; align-items:center; justify-content:center; cursor:pointer; }
 .sheet-title{ font-family:Georgia,serif; font-style:italic; font-weight:400; font-size:18px; margin:0 0 4px 0; }
 .sheet-sub{ color:var(--sub); font-size:11px; margin:0 0 4px 0; }
 label{ display:block; font-size:11px; color:var(--sub); text-transform:uppercase; letter-spacing:0.5px; margin:14px 0 6px 0; }
@@ -94,10 +94,10 @@ textarea{ resize:none; min-height:60px; }
 .time-range{ display:flex; align-items:center; gap:10px; }
 .time-range select{ background:var(--panel-2); border:1px solid var(--line); color:var(--text); border-radius:10px; padding:10px; font-family:inherit; font-size:14px; flex:1; }
 .cat-row{ display:flex; gap:8px; flex-wrap:wrap; }
-.cat-pill{ padding:8px 14px; border-radius:20px; font-size:12px; border:1.5px solid var(--line); background:transparent; color:var(--text); cursor:pointer; transition:transform 0.15s cubic-bezier(0.22,1,0.36,1), background 0.2s ease, border-color 0.2s ease, color 0.2s ease; touch-action:manipulation; }
+.cat-pill{ padding:8px 14px; border-radius:20px; font-size:12px; border:1.5px solid var(--line); background:transparent; color:var(--text); cursor:pointer; transition:transform 0.15s cubic-bezier(0.22,1,0.36,1), background 0.2s ease, border-color 0.2s ease, color 0.2s ease; }
 .cat-pill.selected{ border-color:transparent; color:#12141c; font-weight:600; }
 .sheet-actions{ display:flex; gap:10px; margin-top:22px; }
-.btn{ flex:1; padding:13px; border-radius:12px; border:none; font-family:inherit; font-size:14px; font-weight:600; cursor:pointer; touch-action:manipulation; }
+.btn{ flex:1; padding:13px; border-radius:12px; border:none; font-family:inherit; font-size:14px; font-weight:600; cursor:pointer; }
 .btn:disabled{ opacity:0.6; }
 .btn-save{ background:var(--accent); color:var(--accent-ink); }
 .btn-delete{ background:transparent; color:var(--wasted); border:1.5px solid var(--wasted); }
