@@ -2,7 +2,7 @@
 // latest deployed code when online, falling back to the cached copy only when
 // offline. (Cache-first was causing installed apps to get permanently stuck
 // on whatever version happened to be cached at install time.)
-const CACHE = 'planner-shell-v18';
+const CACHE = 'planner-shell-v19';
 const SHELL_FILES = [
   './',
   './index.html',

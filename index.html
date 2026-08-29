@@ -178,6 +178,27 @@
 
 <div id="drawerMount"></div>
 
+<!-- TEMP DEBUG: remove once the mobile close-button issue is found -->
+<div id="tapDebug" style="position:fixed; top:0; left:0; right:0; z-index:99999; background:rgba(0,0,0,0.85); color:#0f0; font:10px monospace; padding:4px 6px; max-height:110px; overflow:hidden; pointer-events:none; white-space:pre-wrap;"></div>
+<script>
+(function () {
+  var log = document.getElementById('tapDebug');
+  var lines = [];
+  function record(label, e) {
+    var t = e.target;
+    var desc = (t.id ? '#' + t.id : t.tagName) + (t.className ? '.' + String(t.className).split(' ').join('.') : '');
+    var x = (e.touches && e.touches[0]) ? e.touches[0].clientX : e.clientX;
+    var y = (e.touches && e.touches[0]) ? e.touches[0].clientY : e.clientY;
+    lines.push(label + ': ' + desc + ' @ (' + Math.round(x) + ',' + Math.round(y) + ')');
+    if (lines.length > 6) lines.shift();
+    log.textContent = lines.join('\n');
+  }
+  ['touchstart', 'touchend', 'pointerdown', 'click'].forEach(function (type) {
+    document.addEventListener(type, function (e) { record(type, e); }, true);
+  });
+})();
+</script>
+
 </div><!-- /#shell -->
 
 <script src="config.js"></script>
